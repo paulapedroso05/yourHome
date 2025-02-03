@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-primeira-pagina',
@@ -9,12 +10,15 @@ import { Component } from '@angular/core';
 })
 export class PrimeiraPaginaComponent {
 
-  direcionarLoginCorretor(){
+  constructor(private router:Router){}
 
+  direcionarLoginCorretor(name: string){
+    this.router.navigate(['/login', name]);
   }
 
-  direcionarLoginUsuario(){
-    
+  direcionarLoginUsuario(name: string){
+    this.router.navigate(['/login', name]);
   }
+
 
 }

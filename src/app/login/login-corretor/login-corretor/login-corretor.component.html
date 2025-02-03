@@ -9,7 +9,7 @@
     </div>
   </nav>
 
-  <div class="login-container d-flex justify-content-center align-items-center vh-100">
+  <div class="login-container d-flex justify-content-center align-items-center vh-100" *ngIf="name.includes('corretor')">
     <div class="login-box">
       <form>
         <div class="form-group d-flex align-items-center">
@@ -23,16 +23,17 @@
         </div>
         <br />
         <div class="form-group text-center">
-            <p style="color: rgb(92, 197, 246);">Login\Criar Conta</p>
+            <a style="color: rgb(92, 197, 246); cursor: pointer;" (click)="cadastroCorretor()">Login\Criar Conta</a>
         </div>
+        <br />
         <div class="text-center">
-            <button type="submit" class="btn btn-info" style="width: 150px;">Logar</button>
+            <button type="submit" class="btn btn-info" style="width: 150px;color:white" (click)="editarPerfil()">Logar</button>
         </div>
       </form>
     </div>
   </div>
 
-  <div class="login-container d-flex justify-content-center align-items-center vh-100">
+  <div class="login-container d-flex justify-content-center align-items-center vh-100" *ngIf="name.includes('usuario')">
     <div class="login-box">
       <form>
         <div class="form-group d-flex align-items-center">
@@ -46,10 +47,11 @@
         </div>
         <br />
         <div class="form-group text-center">
-            <p style="color: rgb(92, 197, 246);">Login\Criar Conta</p>
+            <a style="color: rgb(92, 197, 246); cursor: pointer;" (click)="cadastroUsuario()">Login\Criar Conta</a>
         </div>
+        <br />
         <div class="text-center">
-            <button type="submit" class="btn btn-info" style="width: 150px;">Logar</button>
+            <button type="submit" class="btn btn-info" style="width: 150px; color:white" (click)="buscarCorretor()">Logar</button>
         </div>
       </form>
     </div>

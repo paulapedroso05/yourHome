@@ -7,10 +7,12 @@ import { BuscaCorretorComponent } from './busca/busca-corretor/busca-corretor.co
 import { ManutencaoCorretorComponent } from './atualiza-dados/manutencao-corretor/manutencao-corretor.component';
 
 export const routes: Routes = [
-    {path: '', component: ManutencaoCorretorComponent},
+    {path: '', component: PrimeiraPaginaComponent},
     {path: 'busca-corretor', component: BuscaCorretorComponent},
-    {path: 'login', component: LoginCorretorComponent},
+    {path: 'login/:name', component: LoginCorretorComponent},
     {path: 'inicial', component: PrimeiraPaginaComponent},
     {path: 'cadastro-usuario', component: CadastroComponent},
-    {path: 'cadastro-corretor', component: CadastroCorretorComponent}
+    {path: 'cadastro-corretor', component: CadastroCorretorComponent},
+    {path: 'atualizar-corretor', component: ManutencaoCorretorComponent}
+    
 ];
